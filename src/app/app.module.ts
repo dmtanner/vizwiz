@@ -19,7 +19,8 @@ import { HomeComponent } from './home.component';
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent}
+      { path: '', component: HomeComponent},
+      { path: '**', redirectTo: '', pathMatch: 'full'}
     ]),
     ResponseModule
   ],

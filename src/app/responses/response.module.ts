@@ -4,6 +4,7 @@ import {RouterModule} from '@angular/router';
 
 import {ResponseListComponent} from './response-list.component';
 import {ResponseVisualizationComponent} from './response-visualization.component';
+import { ResponseService } from './response.service';
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import {ResponseVisualizationComponent} from './response-visualization.component
             { path: 'response/:id', component: ResponseVisualizationComponent}
         ])
     ],
+    providers: [ResponseService],
     exports: []
 })
 export class ResponseModule {}

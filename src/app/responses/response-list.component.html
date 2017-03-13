@@ -2,7 +2,7 @@
     <div class='panel-header'>
     </div>
     <div class='panel-body'>
-        <table class="table">
+        <table class="table" *ngIf='responses && responses.length'>
             <thead>
                 <tr>
                     <th>Tag</th>
@@ -10,17 +10,9 @@
                 </tr>
             </thead>
             <tbody> 
-                <tr>
-                    <td>#howitsdone</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>#whatnottowear</td>
-                    <td>134</td>
-                </tr>
-                <tr>
-                    <td>#thisistheplace</td>
-                    <td>47</td>
+                <tr *ngFor='let response of responses'>
+                    <td>{{response.tags[0]}}</td>
+                    <td>{{response.text}}</td>
                 </tr>
             </tbody>
         </table>
