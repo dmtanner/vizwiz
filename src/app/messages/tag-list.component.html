@@ -2,17 +2,17 @@
     <div class='panel-header'>
     </div>
     <div class='panel-body'>
-        <table class="table" *ngIf='responses && responses.length'>
+        <table class="table" *ngIf='tags && tags.length'>
             <thead>
                 <tr>
                     <th>Tag</th>
-                    <th># Responses</th>
+                    <th># Messages</th>
                 </tr>
             </thead>
             <tbody> 
-                <tr *ngFor='let response of responses'>
-                    <td>{{response.tags[0]}}</td>
-                    <td>{{response.text}}</td>
+                <tr *ngFor="let tag of tags">
+                    <td><a [routerLink]="['/tag', tag.text]">#{{tag.text}}</a></td>
+                    <td>{{tag.numberMessages}}</td>
                 </tr>
             </tbody>
         </table>

@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { ResponseModule } from './responses/response.module';
+import { MessageModule } from './messages/message.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home.component';
@@ -22,7 +22,7 @@ import { HomeComponent } from './home.component';
       { path: '', component: HomeComponent},
       { path: '**', redirectTo: '', pathMatch: 'full'}
     ]),
-    ResponseModule
+    MessageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

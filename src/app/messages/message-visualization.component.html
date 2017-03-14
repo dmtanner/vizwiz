@@ -1,0 +1,16 @@
+<div class='panel panel-default'>
+    <table class="table" *ngIf='messages && messages.length'>
+        <thead>
+            <tr>
+                <th>Message</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody> 
+            <tr *ngFor="let message of messages">
+                <td>{{message.text}}</td>
+                <td>{{message.date}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
