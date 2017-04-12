@@ -1,5 +1,8 @@
-<div class='panel panel-default'>
-    <table class="table" *ngIf='messages && messages.length'>
+<div class="panel panel-default">
+    <div class="panel-head">
+        <h2>#{{tagName}}</h2>
+    </div>
+    <table class="table" *ngIf="messages && messages.length">
         <thead>
             <tr>
                 <th>Message</th>

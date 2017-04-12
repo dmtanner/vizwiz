@@ -19,6 +19,10 @@ export class TagListComponent implements OnInit {
         this._messageService.getTags()
             .subscribe(tags => this.tags = tags,
                         error => this.errorMessage = <any>error);
-    } 
+    }
+
+    onSelectTag(tag: ITag): void {
+        this._messageService.setSelectedTag(tag);
+    }
 
 }

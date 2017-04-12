@@ -1,5 +1,5 @@
 export interface ITag {
-    id: number,
-    text: string,
-    numberMessages: number
+    id: number;
+    text: string;
+    numberMessages: number;
 }

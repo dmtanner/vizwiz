@@ -9,7 +9,7 @@ import { MessageService } from './message.service';
 @NgModule({
     declarations: [
         TagListComponent,
-        MessageVisualizationComponent      
+        MessageVisualizationComponent
     ],
     imports: [
         CommonModule,

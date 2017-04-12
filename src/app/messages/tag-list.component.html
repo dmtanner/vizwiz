@@ -9,9 +9,10 @@
                     <th># Messages</th>
                 </tr>
             </thead>
-            <tbody> 
+            <tbody>
                 <tr *ngFor="let tag of tags">
-                    <td><a [routerLink]="['/tag', tag.text]">#{{tag.text}}</a></td>
+                    <td>
+                        <a [routerLink]="['/tag', tag.id]" (click)="onSelectTag(tag)">#{{tag.text}}</a></td>
                     <td>{{tag.numberMessages}}</td>
                 </tr>
             </tbody>
